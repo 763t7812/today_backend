@@ -51,6 +51,10 @@ io.on('connection', (socket: Socket) => {
 
 });
 
+app.get('/',()=>{
+  json.send('hello connected')
+})
+
 server.listen(4000, () => {
   console.log('listening on *:3000');
 });
