@@ -51,8 +51,8 @@ io.on('connection', (socket: Socket) => {
 
 });
 
-app.get('/',()=>{
-  json.send('hello connected')
+app.get('/',(req,res)=>{
+  res.send('hello connected')
 })
 
 server.listen(4000, () => {
